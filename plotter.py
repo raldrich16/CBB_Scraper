@@ -1,9 +1,5 @@
 from parser2 import get_team_schedule, get_player_season_stats, get_player_game_stats
 import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-from matplotlib import style
-import sqlite3
 from sqlalchemy import create_engine
 
 
