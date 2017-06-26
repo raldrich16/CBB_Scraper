@@ -1,7 +1,7 @@
 from parser2 import get_team_schedule, get_player_season_stats, get_player_game_stats
 import pandas as pd
 from sqlalchemy import create_engine
-
+import matplotlib.pyplot as plt
 
 class CbbStats:
     def __init__(self, team):
@@ -30,8 +30,12 @@ class CbbStats:
 
         return df
 
+'''instance = CbbStats("Arizona Wildcats")
+df = instance.player_game_stats_dataframe()
+df.plot()
+plt.show()'''
 
-if __name__ == '__main__':
+'''if __name__ == '__main__':
 
     instance = CbbStats(input("Please enter your team name: "))
 
@@ -40,7 +44,7 @@ if __name__ == '__main__':
     instance.player_game_stats_dataframe().to_sql("player_game_stats", engine, if_exists="replace")
     instance.player_season_stats_dataframe().to_sql("player_season_stats", engine, if_exists="replace")
     instance.team_schedule_dataframe().to_sql("team_results", engine, if_exists="replace")
-    print("Created/updated cbb.db")
+    print("Created/updated cbb.db")'''
 
 
 
